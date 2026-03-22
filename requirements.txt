@@ -1,0 +1,2 @@
+# Minecraft Block Calculator Dependencies
+# Built and tested on PowerShell 7.6.0
