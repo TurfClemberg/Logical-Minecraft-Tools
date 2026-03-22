@@ -1,9 +1,22 @@
-height_length = int(input("Enter the height of the longer side (length) of your wall (In Blocks): "))
-height_breadth = int(input("Enter the height of the shorter side (breadth) of your wall (In Blocks): "))
-length_length = int(input("Enter the length of the longer side (length) of your wall (In Blocks): "))
-length_breadth = int(input("Enter the length of the shorter side (breadth) of your wall (In Blocks): "))
-width_length = int(input("Enter the width of the longer side (length) of your wall (In Blocks): "))
-width_breadth = int(input("Enter the width of the shorter side (breadth) of your wall (In Blocks): "))
+print("""
+    For helping you understand what values to input in which prompt, here is a quick diagram that will help you visualize your build:
+                               A -------------------------------------------------------- B
+                                 |                                                       |
+                                 |                                                       |
+                                 |                                                       |
+                                 |                                                       |
+                                 |                                                       |
+                                 |                                                       |
+                                 |                                                       |
+                                 |                                                       |
+                                 |                                                       |
+                                D ------------------------------------------------------ C""")
+height_length = int(input("Enter the height of AB of your wall (In Blocks): "))
+height_breadth = int(input("Enter the height of AD of your wall (In Blocks): "))
+length_length = int(input("Enter the length of AB of your wall (In Blocks): "))
+length_breadth = int(input("Enter the length of AD of your wall (In Blocks): "))
+width_length = int(input("Enter the width of AB of your wall (In Blocks): "))
+width_breadth = int(input("Enter the width of AD of your wall (In Blocks): "))
 if height_length == height_breadth:
     intersecting_blocks = (width_length * width_breadth * height_length)
 elif height_length > height_breadth:
