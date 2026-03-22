@@ -1,3 +1,8 @@
+# Minecraft Block Calculator v1.0
+# Created by: Ankush
+# Function: Calculates total blocks and stack counts for 4-sided walls, accounting for corner overlaps.
+
+# Visualizing Diagram for easy understanding, necessary for correct user input
 print("""
     For helping you understand what values to input in which prompt, here is a quick diagram that will help you visualize your build:
                                A -------------------------------------------------------- B
@@ -12,18 +17,24 @@ print("""
                                  |                                                       |
                                 D ------------------------------------------------------ C
     In the above diagram, AB is the length of the wall, and AD is the width""")
+
+# User Input Prompts
 height_length = int(input("Enter the height of AB of your wall (In Blocks): "))
 height_breadth = int(input("Enter the height of AD of your wall (In Blocks): "))
 length_length = int(input("Enter the length of AB of your wall (In Blocks): "))
 length_breadth = int(input("Enter the length of AD of your wall (In Blocks): "))
 width_length = int(input("Enter the width of AB of your wall (In Blocks): "))
 width_breadth = int(input("Enter the width of AD of your wall (In Blocks): "))
+
+# Logic for calculating total blocks, accounting for overlaps and intersections at the corners
 intersecting_blocks = ((width_length * width_breadth) * min(height_length, height_breadth))
 total_blocks_for_length = (length_length * height_length * width_length) * 2
 total_blocks_for_breadth = ((length_breadth * height_breadth * width_breadth) - intersecting_blocks * 2) * 2
 total_blocks = total_blocks_for_length + total_blocks_for_breadth
 stacks = total_blocks // 64
 remainder = total_blocks % 64
+
+# Program Output
 print(f"Total Blocks required to build 4-sided wall: {total_blocks}")
 print(f"Blocks required to build the length of the wall: {total_blocks_for_length}")
 print(f"Blocks required to build the breadth of the wall: {total_blocks_for_breadth}")
