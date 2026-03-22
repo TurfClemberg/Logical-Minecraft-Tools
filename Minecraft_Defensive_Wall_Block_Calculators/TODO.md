@@ -10,3 +10,5 @@
 ## Output Generation
 - [ ] Create a function that generates the output based on the calculations, allowing for better separation of concerns and making it easier to modify the output format in the future if needed.
 - [ ] Format the output in a clear and user-friendly manner, providing all necessary information in a way that is easy to understand, such as using labels and units for the calculated values.
+## Versatility
+- [ ] Add features, or change them in a manner, such that they work equally good, cross-device, especially the ASCII Diagram, as on mobile, the diagram is not being displayed properly.
