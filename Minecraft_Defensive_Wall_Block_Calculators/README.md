@@ -1,3 +1,6 @@
+![Version](https://img.shields.io/badge/version-v1.0.0--beta.1-orange)
+![Status](https://img.shields.io/badge/status-BETA-blue)
+![Environment](https://img.shields.io/badge/verified-PowerShell%207.6.0-green)
 ## Technical Specification: 4-Sided Wall Intersection Logic
 
 ### Overview
