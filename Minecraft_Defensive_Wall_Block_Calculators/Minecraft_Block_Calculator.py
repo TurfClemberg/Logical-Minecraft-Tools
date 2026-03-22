@@ -10,7 +10,8 @@ print("""
                                  |                                                       |
                                  |                                                       |
                                  |                                                       |
-                                D ------------------------------------------------------ C""")
+                                D ------------------------------------------------------ C
+    In the above diagram, AB is the length of the wall, and AD is the width""")
 height_length = int(input("Enter the height of AB of your wall (In Blocks): "))
 height_breadth = int(input("Enter the height of AD of your wall (In Blocks): "))
 length_length = int(input("Enter the length of AB of your wall (In Blocks): "))
