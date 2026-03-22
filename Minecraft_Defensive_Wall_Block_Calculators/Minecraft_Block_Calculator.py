@@ -19,17 +19,17 @@ print("""
     In the above diagram, AB is the length of the wall, and AD is the width""")
 
 # User Input Prompts
-height_length = int(input("Enter the height of AB of your wall (In Blocks): "))
-height_breadth = int(input("Enter the height of AD of your wall (In Blocks): "))
-length_length = int(input("Enter the length of AB of your wall (In Blocks): "))
-length_breadth = int(input("Enter the length of AD of your wall (In Blocks): "))
-width_length = int(input("Enter the width of AB of your wall (In Blocks): "))
-width_breadth = int(input("Enter the width of AD of your wall (In Blocks): "))
+height_of_AB = int(input("Enter the height of AB of your wall (In Blocks): "))
+height_of_AD = int(input("Enter the height of AD of your wall (In Blocks): "))
+length_of_AB = int(input("Enter the length of AB of your wall (In Blocks): "))
+length_of_AD = int(input("Enter the length of AD of your wall (In Blocks): "))
+width_of_AB = int(input("Enter the width of AB of your wall (In Blocks): "))
+width_of_AD = int(input("Enter the width of AD of your wall (In Blocks): "))
 
 # Logic for calculating total blocks, accounting for overlaps and intersections at the corners
-intersecting_blocks = ((width_length * width_breadth) * min(height_length, height_breadth))
-total_blocks_for_length = (length_length * height_length * width_length) * 2
-total_blocks_for_breadth = ((length_breadth * height_breadth * width_breadth) - intersecting_blocks * 2) * 2
+intersecting_blocks = ((width_of_AB * width_of_AD) * min(height_of_AB, height_of_AD))
+total_blocks_for_length = (length_of_AB * height_of_AB * width_of_AB) * 2
+total_blocks_for_breadth = ((length_of_AD * height_of_AD * width_of_AD) - intersecting_blocks * 2) * 2
 total_blocks = total_blocks_for_length + total_blocks_for_breadth
 stacks = total_blocks // 64
 remainder = total_blocks % 64
