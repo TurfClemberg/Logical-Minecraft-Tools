@@ -18,14 +18,14 @@ The algorithm operates on a **Primary-Axis Priority** model. The "Longer Side" (
 
 #### 1. Intersection Detection
 The program first determines the effective height of the intersection. If the two connecting walls have different heights, the shared volume is limited by the shorter wall:
-* If $H_{length} == H_{breadth}$, Intersection Height = $H_{length}$
-* If $H_{length} > H_{breadth}$, Intersection Height = $H_{breadth}$
-* Otherwise, Intersection Height = $H_{length}$
+* If $H_{ab} == H_{ad}$, Intersection Height = $H_{ab}$
+* If $H_{ab} > H_{ad}$, Intersection Height = $H_{ad}$
+* Otherwise, Intersection Height = $H_{ab}$
 
 #### 2. Volume Calculations
-* **Single Corner Volume:** $W_{length} \times W_{breadth} \times \text{Intersection Height}$
-* **Total Length Volume:** $(L_{length} \times H_{length} \times W_{length}) \times 2$
-* **Total Breadth Volume:** $((L_{breadth} \times H_{breadth} \times W_{breadth}) - (\text{Single Corner Volume} \times 2)) \times 2$
+* **Single Corner Volume:** $W_{ab} \times W_{ad} \times \text{Intersection Height}$
+* **Total Length Volume:** $(L_{ab} \times H_{ab} \times W_{ab}) \times 2$
+* **Total Breadth Volume:** $((L_{ad} \times H_{ad} \times W_{ad}) - (\text{Single Corner Volume} \times 2)) \times 2$
 
 ### Technical Performance (Example Case)
 For a fortification with the following parameters:
